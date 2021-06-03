@@ -1,11 +1,15 @@
-export function Thermometer({ temperature }) {
+import './Thermometer.css'
+
+export default function Thermometer({ temperature }) {
+    function getClass() {
+        if (temperature > 0) return "hot";
+        if (temperature < 0) return "cold";
+        return "zero";
+    }
+
     return (
         <>
-            <div>
-                {temperature > 0 && (<div className="hot">{temperature}</div>)}
-                {temperature < 0 && (<div className="cold">{temperature}</div>)}
-                {temperature === 0 && (<div>{temperature}</div>)}
-            </div>
+            <div className={getClass()} data-testid="thermometer">{temperature}</div>
         </>
     )
 }

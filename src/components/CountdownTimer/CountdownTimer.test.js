@@ -26,5 +26,5 @@ test('Отображается таймер, в начале показывае�
     act(() => {
         jest.advanceTimersByTime(5000);
     });
-    expect(screen.getByTestId('timer')).toHaveTextContent('');
+    expect(screen.getByTestId('timer')).toHaveTextContent('0');
 });

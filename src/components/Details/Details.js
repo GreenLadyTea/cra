@@ -1,5 +1,5 @@
 import {useState} from "react";
-import './Details.css'
+import './Details.css';
 
 export default function Details({shortText, text}) {
     const MORE = 'Подробнее';
