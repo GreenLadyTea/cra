@@ -7,6 +7,8 @@ import ReverseString from "./components/ReverseString/ReverseString";
 import ReverseButton from "./components/ReverseButton/ReverseButton";
 import Alert from "./components/Alert/Alert";
 import TrafficLight from "./components/TrafficLight/TrafficLight";
+import SelectBox from "./components/SelectBox/SelectBox";
+import WebTodos from "./components/WebTodos/WebTodos";
 
 function App() {
   return (
@@ -43,11 +45,13 @@ function App() {
         <h2>10. Счётчик с переменным шагом</h2>
 
         <h2>11. Селектбокс</h2>
+        <SelectBox options={[1, 2, 3]} onSelect={value => console.log(value)} />
 
         <h2>12. Компонент для неважной информации</h2>
         <Details shortText="Лицензионное соглашение" text="Настоящее соглашение дает вам нижеследующие права..."/>
 
         <h2>13. Обращение к сети</h2>
+        <WebTodos />
     </div>
   );
 }

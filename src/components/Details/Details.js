@@ -6,7 +6,8 @@ export default function Details({shortText, text}) {
     const HIDE = 'Скрыть';
     const [details, setDetails] = useState(MORE);
 
-    function handleClick() {
+    function handleClick(e) {
+        e.preventDefault();
         setDetails(() => {
             if(details === MORE)
             {
@@ -22,7 +23,7 @@ export default function Details({shortText, text}) {
             <div>
                 <span className="bold-text" data-testid="short-text">{shortText} </span>
                 {details === HIDE && (<span data-testid="long-text"> {text} </span>)}
-                <span onClick={() => handleClick()} className="link" data-testid="link">{details}</span>
+                <a href="/" onClick={(e) => handleClick(e)} data-testid="link">{details}</a>
             </div>
         </>
     )

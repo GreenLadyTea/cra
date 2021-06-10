@@ -8,10 +8,12 @@ export default function TrafficLight() {
         GREEN: 'green',
         YELLOW_GREEN: 'yellowGreen'
     };
+
     const times = {
-        MOVE: 5,
-        WAIT: 2
+        MOVE: 3,
+        WAIT: 1
     }
+
     const [color, setColor] = useState(colors.RED);
 
     useEffect(() => {
@@ -26,8 +28,8 @@ export default function TrafficLight() {
     });
 
     return <>
-        <div className={'trafficLight ' + (color === colors.RED ? 'redLight' : '')}/>
-        <div className={'trafficLight ' + (color === colors.YELLOW_GREEN || color === colors.YELLOW_RED ? 'yellowLight' : '')}/>
-        <div className={'trafficLight ' + (color === colors.GREEN ? 'greenLight' : '')}/>
+        <div data-testid="1" className={'trafficLight ' + (color === colors.RED ? 'redLight' : '')} />
+        <div data-testid="2" className={'trafficLight ' + (color === colors.YELLOW_GREEN || color === colors.YELLOW_RED ? 'yellowLight' : '')} />
+        <div data-testid="3" className={'trafficLight ' + (color === colors.GREEN ? 'greenLight' : '')} />
     </>
 }
