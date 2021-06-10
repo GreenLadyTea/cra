@@ -9,6 +9,7 @@ import Alert from "./components/Alert/Alert";
 import TrafficLight from "./components/TrafficLight/TrafficLight";
 import SelectBox from "./components/SelectBox/SelectBox";
 import WebTodos from "./components/WebTodos/WebTodos";
+import Fibbonacci from "./components/Fibbonacci/Fibbonacci";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <CountdownTimer />
 
         <h2>3. Число Фибоначчи</h2>
+        <Fibbonacci />
 
         <h2>4. Обратная строка</h2>
         <ReverseString text="А роза ☻ упала на ! лапу 7:4 Азора☻" />
